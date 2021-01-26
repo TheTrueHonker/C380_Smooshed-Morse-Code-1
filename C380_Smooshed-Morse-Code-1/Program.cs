@@ -52,21 +52,40 @@ namespace C380_Smooshed_Morse_Code_1
             Console.WriteLine("Excercise 2");
             Console.WriteLine("Getting morsecode with 15 dashes in a row");
             counter = 0;
-            string answerExercise2_Morse = "";
-            string answerExercise2_Text = "";
+            SmooshedMorsecode answerExcercise2 = new SmooshedMorsecode("");
             foreach (SmooshedMorsecode morsecode in morsecodes)
             {
                 counter++;
                 Console.Write("\rChecking {0} of {1}", counter, morsecodes.Count);
                 if(morsecode.DashesInRow == 15)
                 {
-                    answerExercise2_Text = morsecode.Text;
-                    answerExercise2_Morse = morsecode.Morse;
+                    answerExcercise2 = morsecode;
                     break;
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("ANSWER: {0}: {1}", answerExercise2_Text, answerExercise2_Morse);
+            Console.Write("ANSWER: ");
+            answerExcercise2.Print();
+
+            Console.WriteLine();
+            Console.WriteLine("Excercise 3");
+            Console.WriteLine("Getting prefectly balanced morsecodes");
+            List<SmooshedMorsecode> perfectlyBallancedMorseCodes = new List<SmooshedMorsecode>();
+            counter = 0;
+            foreach(SmooshedMorsecode morsecode in morsecodes)
+            {
+                counter++;
+                Console.Write("\rChecking {0} of {1}", counter, morsecodes.Count);
+                if (morsecode.Dashes == morsecode.Dots)
+                    perfectlyBallancedMorseCodes.Add(morsecode);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Found the following Morsecodes with 21 letters:");
+            foreach(SmooshedMorsecode morsecode in perfectlyBallancedMorseCodes)
+            {
+                if(morsecode.Text.Length == 21)
+                    morsecode.Print();
+            }
         }
     }
 }

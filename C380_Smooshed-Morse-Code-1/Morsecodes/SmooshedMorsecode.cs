@@ -21,6 +21,11 @@ namespace C380_Smooshed_Morse_Code_1
 
         }
 
+        public void Print()
+        {
+            Console.WriteLine("{0}: {1}", Text, Morse);
+        }
+
         protected void RecountDashesDots()
         {
             long dashesCount = 0;
