@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using C380_Smooshed_Morse_Code_1.Morsecode;
+using C380_Smooshed_Morse_Code_1.Translators;
 
 namespace C380_Smooshed_Morse_Code_1_Test.Translators
 {
