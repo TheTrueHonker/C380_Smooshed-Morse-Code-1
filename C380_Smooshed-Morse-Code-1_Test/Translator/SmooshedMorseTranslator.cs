@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace C380_Smooshed_Morse_Code_1_Test
+namespace C380_Smooshed_Morse_Code_1_Test.Translators
 {
     [TestClass]
-    public class SmooshedMorse
+    public class SmooshedMorseTranslator
     {
         [TestCategory("Smooshed Morse")]
         [TestMethod]
@@ -12,7 +12,7 @@ namespace C380_Smooshed_Morse_Code_1_Test
             string text = "programmer";
             string expectedMorse = ".--..-.-----..-..-----..-.";
 
-            string morse = C380_Smooshed_Morse_Code_1.Morsecode.SmooshedMorse.smorse(text);
+            string morse = C380_Smooshed_Morse_Code_1.Translators.SmooshedMorseTranslator.smorse(text);
 
             Assert.AreEqual(expectedMorse, morse);
         }

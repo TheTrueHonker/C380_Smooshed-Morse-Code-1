@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace C380_Smooshed_Morse_Code_1.Morsecode
+namespace C380_Smooshed_Morse_Code_1.Translators
 {
-    public static class SmooshedMorse
+    public static class SmooshedMorseTranslator
     {
         public static string smorse(string text)
         {

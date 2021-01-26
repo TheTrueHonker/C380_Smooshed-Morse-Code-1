@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using C380_Smooshed_Morse_Code_1.Morsecode;
 
-namespace C380_Smooshed_Morse_Code_1_Test
+namespace C380_Smooshed_Morse_Code_1_Test.Translators
 {
     [TestClass]
-    public class Morse
+    public class MorseTranslator
     {
         [TestCategory("Morse")]
         [TestMethod]
@@ -13,7 +13,7 @@ namespace C380_Smooshed_Morse_Code_1_Test
             string letter = "z";
             string expectedMorse = "--..";
 
-            string morse = C380_Smooshed_Morse_Code_1.Morsecode.Morse.getMorse(letter);
+            string morse = C380_Smooshed_Morse_Code_1.Translators.MorseCharTranslator.getMorse(letter);
 
             Assert.AreEqual(expectedMorse, morse);
         }
@@ -25,7 +25,7 @@ namespace C380_Smooshed_Morse_Code_1_Test
             char letter = 'z';
             string expectedMorse = "--..";
 
-            string morse = C380_Smooshed_Morse_Code_1.Morsecode.Morse.getMorse(letter);
+            string morse = C380_Smooshed_Morse_Code_1.Translators.MorseCharTranslator.getMorse(letter);
 
             Assert.AreEqual(expectedMorse, morse);
         }
@@ -37,7 +37,7 @@ namespace C380_Smooshed_Morse_Code_1_Test
             string morse = "--..";
             string expectedletter = "z";
 
-            string letter = C380_Smooshed_Morse_Code_1.Morsecode.Morse.getLetter(morse);
+            string letter = C380_Smooshed_Morse_Code_1.Translators.MorseCharTranslator.getLetter(morse);
 
             Assert.AreEqual(expectedletter, letter);
         }
