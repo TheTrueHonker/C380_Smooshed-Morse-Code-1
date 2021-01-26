@@ -16,7 +16,7 @@ namespace C380_Smooshed_Morse_Code_1.Translators
                     smoothedMorse += " ";
                     continue;
                 }
-                smoothedMorse += Morse.getMorse(text[i]);
+                smoothedMorse += MorseCharTranslator.getMorse(text[i]);
             }
             return smoothedMorse;
         }
