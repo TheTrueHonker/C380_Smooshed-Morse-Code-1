@@ -86,6 +86,31 @@ namespace C380_Smooshed_Morse_Code_1
                 if(morsecode.Text.Length == 21)
                     morsecode.Print();
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Excercise 4");
+            Console.WriteLine("Getting a 12 letter long palindrome");
+            List<SmooshedMorsecode> palindromes = new List<SmooshedMorsecode>();
+            counter = 0;
+            foreach(SmooshedMorsecode morsecode in morsecodes)
+            {
+                counter++;
+                Console.Write("\rChecking {0} of {1}", counter, morsecodes.Count);
+                string reverseMorse = "";
+                for(int i = morsecode.Morse.Length-1; i >= 0; i--)
+                {
+                    reverseMorse += morsecode.Morse[i];
+                }
+                if (morsecode.Morse == reverseMorse)
+                    palindromes.Add(morsecode);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Found the following Morsecodes with a 13-letter word:");
+            foreach(SmooshedMorsecode morsecode in palindromes)
+            {
+                if (morsecode.Text.Length == 13)
+                    morsecode.Print();
+            }
         }
     }
 }
